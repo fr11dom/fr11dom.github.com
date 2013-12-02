@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CSS | 茧单网志</title>
-  <meta name="author" content="yuduntao">
+  <title>css | 茧单网志</title>
+  <meta name="author" content="yutao">
   
   <meta name="description" content="余涛的博客，记录生活点滴">
   
@@ -27,8 +27,7 @@
 
 
 <body>
-	<div id="doc">
-	  <header id="header" class="inner"><div class="alignleft">
+  <header id="header" class="inner"><div class="alignleft">
   <h1><a href="/">茧单网志</a></h1>
   <h2>不可预知的未来只会让人更加兴奋，所以要踏实活在当下.</h2>
 </div>
@@ -45,32 +44,37 @@
   <div class="clearfix"></div>
 </nav>
 <div class="clearfix"></div></header>
-	  <div id="content" class="inner">
-	    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title category">CSS</h2>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title category">css</h2>
 
 
   
     <article class="post">
   
   <div class="post-content">
-    <header>
+    <header class="clearfix">
       
   
-    <h1 class="title alignleft"><a href="/2013/12/02/block-formatting-context/">Block Formatting Context</a></h1>
+    <h1 class="title"><a href="/2013/12/02/block-formatting-context/">Block Formatting Context</a></h1>
   
 
       
-        <!--<div class="icon"></div>-->
+        
+  
+  <div class="categories">
+    <a href="/categories/css/">css</a>
+  </div>
+
         <time class="alignleft" datetime="2013-12-02T08:02:00.000Z">
             2013-12-02 16:02
         </time>
+        <div class="author">yutao</div>
       
-      <div class="clearfix"></div>
     </header>
     <div class="entry">
       
-        <p>CSS背后居然站着BFC这种大神！<br>关于BFC很多IT博主都崇拜过，作为一个菜鸟今天终于鼓起了勇气，我也来走进大神、模仿大神看是不是能提升我CSS的功力<br>google后首先发现的是这篇文章<a href="http://www.w3.org/html/ig/zh/wiki/CSS2/visuren#block-formatting" target="_blank">Block formatting contexts</a>，我觉得翻译的真用心，所以也用心看了下。</p>
+        <p>CSS的背后有个神奇的BFC！<br>关于BFC很多IT博主都崇拜过，作为一个菜鸟今天终于鼓起了勇气，我也来走进大神、模仿大神看是不是能提升我CSS的功力<br>google后首先发现的是这篇文章<a href="http://www.w3.org/html/ig/zh/wiki/CSS2/visuren#block-formatting" target="_blank">Block formatting contexts</a>，我觉得翻译的真用心，所以也用心看了下。</p>
 <h4><strong>我得到这么些信息:</strong></h4>
 <pre><code><span class="bullet">1. </span>BFC是属于正常排版（Normal flow）,因此它会一个接一个的垂直摆放。      
 <span class="bullet">2. </span>在同一个BFC里，相邻块margin的top和bottom会折叠。
@@ -105,20 +109,13 @@
   <div class="clearfix"></div>
 </nav>
 </div></div>
-	    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="enter一下本站搜索">
-    <input type="hidden" name="q" value="site:yutaoo.com">
-  </form>
-</div>
-
+    <aside id="sidebar" class="alignright">
   
 <div class="widget tag">
   <h3 class="title">分类</h3>
   <ul class="entry">
   
-    <li><a href="/categories/CSS/">CSS</a><small>1</small></li>
+    <li><a href="/categories/css/">css</a><small>1</small></li>
   
   </ul>
 </div>
@@ -134,16 +131,23 @@
   </ul>
 </div>
 
+
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Enter一下本站搜索">
+    <input type="hidden" name="q" value="site:yutaoo.com">
+  </form>
+</div>
 </aside>
-	    <div class="clearfix"></div>
-	  </div>
-	  <footer id="footer" class="inner"><div class="alignleft">
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2013 yuduntao
+  &copy; 2013 yutao
   
 </div>
 <div class="clearfix"></div></footer>
-	  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 
@@ -158,6 +162,5 @@
 })(jQuery);
 </script>
 
-	</div>
 </body>
 </html>
