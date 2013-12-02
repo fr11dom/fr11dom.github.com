@@ -133,6 +133,14 @@ a:hover {
   float: left;
   margin-left: 30px;
 }
+#header #main-nav ul li a {
+   font-size: 20px;
+   color: #666;
+}
+#header #main-nav ul li a:hover {
+   color: #c43c3c;
+   border-bottom: solid 1px #c43c3c;
+}
 article {
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
