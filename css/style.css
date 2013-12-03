@@ -10,7 +10,7 @@
   padding: 0;
 }
 body {
-  background: #f5f4f2;
+  background: #fff;
   color: #666;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 14px;
@@ -543,29 +543,20 @@ article footer .addthis iframe {
 .archive-title {
   color: #999;
   font-weight: normal;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-shadow: 0 0 1px #fff;
 }
-.archive-title:before {
-  font-family: FontAwesome;
-  content: '\f073';
-  padding-right: 15px;
-}
-.archive-title.tag:before {
-  content: '\f02b';
-}
-.archive-title.category:before {
-  content: '\f07b';
-}
+
 .archive {
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
   border-bottom: 1px solid #ddd;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .archive article {
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  border: solid 1px #eee; 
+  -webkit-box-shadow: 1px 2px 3px #ddd;
+  box-shadow: 1px 2px 3px #ddd;
 }
 .archive article .post-content {
   margin-bottom: 0;
@@ -613,7 +604,7 @@ article footer .addthis iframe {
   font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1em;
   padding: 10px 15px;
-  border: none;
+  border: solid 1px #eee;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -623,7 +614,7 @@ article footer .addthis iframe {
 #sidebar .search input:focus {
   color: #666;
   outline: none;
-  border-bottom: 1px solid #3c94e5;
+  border: 1px solid #3c94e5;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
