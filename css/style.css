@@ -137,6 +137,10 @@ a:hover {
    font-size: 20px;
    color: #666;
 }
+#header #main-nav ul li a.current {
+   border-bottom: solid 1px #c43c3c;
+   color: #c43c3c;
+}
 #header #main-nav ul li a:hover {
    color: #c43c3c;
    border-bottom: solid 1px #c43c3c;
@@ -504,6 +508,11 @@ article footer .addthis {
 article footer .addthis iframe {
   margin-top: 0;
 }
+
+#ds-reset{
+  padding:0 20px 0 20px; 
+}
+    
 #comment {
   padding: 20px;
   background: #fff;
