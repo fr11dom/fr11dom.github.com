@@ -1,10 +1,3 @@
-@import url("//fonts.googleapis.com/css?family=Lato:400,400italic");
-@font-face {
-  font-family: 'FontAwesome';
-  font-style: normal;
-  font-weight: normal;
-  src: url("font/fontawesome-webfont.eot?#iefix") format('embedded-opentype'), url("font/fontawesome-webfont.woff") format('woff'), url("font/fontawesome-webfont.ttf") format('truetype'), url("font/fontawesome-webfont.svg#FontAwesomeRegular") format('svg');
-}
 * {
   margin: 0;
   padding: 0;
@@ -159,16 +152,16 @@ article.page .icon {
   display: none;
 }
 article.post .icon:before {
-  content: '\f016';
+  content: '>';
 }
 article.photo .icon:before {
-  content: '\f030';
+  content: '>';
 }
 article.link .icon:before {
-  content: '\f0c1';
+  content: '>';
 }
 article.link .title a:after {
-  content: '\f08e';
+  content: '>';
   color: #999;
   font: 12px FontAwesome;
   padding-left: 10px;
@@ -236,14 +229,14 @@ article .gallery .prev {
   left: 0;
 }
 article .gallery .prev:before {
-  content: '\f053';
+  content: '>';
   left: 10px;
 }
 article .gallery .next {
   right: 0;
 }
 article .gallery .next:before {
-  content: '\f054';
+  content: '<';
   right: 10px;
 }
 article header .icon {
@@ -429,7 +422,7 @@ article .entry .caption {
   padding-left: 25px;
 }
 article .entry .caption:before {
-  content: '\f040';
+  content: '>';
   position: absolute;
   font: 1.3em FontAwesome;
   position: absolute;
@@ -486,10 +479,10 @@ article footer a.more-link{
   border-bottom:solid 1px #c43c3c;
 }
 article footer a.more-link:before {
-  content: '\f054';
+  content: '>';
 }
 article footer a.comment-link:before {
-  content: '\f075';
+  content: '>';
 }
 article footer .categories,
 article footer .tags {
@@ -543,12 +536,12 @@ article footer .addthis iframe {
   text-shadow: none;
 }
 #pagination .prev:before {
-  content: '\f053';
+  content: '>';
   padding-right: 10px;
   font-family: FontAwesome;
 }
 #pagination .next:after {
-  content: '\f054';
+  content: '<';
   padding-left: 10px;
   font-family: FontAwesome;
 }

@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>清除浮动记录 | 茧单网志</title>
+  <meta name="author" content="yutao">
+  
+  <meta name="description" content="余涛的博客-勤思考-多记录-好记性不如烂笔头。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="清除浮动记录"/>
+  <meta property="og:site_name" content="茧单网志"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+  <link href="/img/favicon.png" rel="shortcut icon">
+  <link rel="alternate" href="/atom.xml" title="茧单网志" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">茧单网志</a></h1>
+  <h2>你看到的永远是别人的，思考写下来才会是自己的。</h2>
+</div>
+<ul>
+
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+    	
+      <li>
+		    <a class="" href="/">首页</a>
+      </li>
+    
+    	
+      <li>
+		    <a class="" href="/archives">归档</a>
+      </li>
+    
+    	
+      <li>
+		    <a class="" href="/about">关于</a>
+      </li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header class="clearfix">
+      
+  
+    <h2 class="title">清除浮动记录</h2>
+  
+
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/CSS/">CSS</a>
+  </div>
+
+        <time class="alignleft" datetime="2013-12-03T00:06:00.000Z">
+            2013-12-03 08:06
+        </time>
+        <div class="author">yutao</div>
+      
+    </header>
+    <div class="entry">
+      2013/12/03/close-float/
+      
+        <p>前端绕不开浮动这个话题，之前也都是拿来主义，所以心里一直有个坎，我其实不知道清除浮动的原理。<br>首先有“清除浮动”和“闭合浮动”两种叫法，这两种叫法我觉得随意因为都是为了实现一个目的。<a id="more"></a></p>
+<h4><strong>浮动的影响</strong></h4>
+<pre><code>1.高度变0（浮动的元素脱离普通流，通常导致父容器没内容支撑而高度变0）
+2.影响兄弟元素的布局(尤其是一些IE浏览器)</code></pre>
+<h4><strong>清除浮动的影响</strong></h4>
+<p>关于清除浮动的影响网上有很多版本，我用过两个版本；<br>版本一:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre>.left{float:left}
+.right{float:right}
+.clear{clear:both}
+<span class="tag">&lt;<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"left"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"right"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"clear"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</pre></td></tr></table></figure>
+
+<p>版本二:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>.clearfix:after {clear:both; content:' '; display:block; font-size:0; line-height:0; visibility:hidden; width:0; height:0}
+* html .clearfix {zoom:1}
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"clearfix"</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"left"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"right"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</pre></td></tr></table></figure>
+
+<p>版本一是最简单的，效果很好，也很好理解，不过多个空div就是不爽，而且明摆着那结构做样式的事情。<br>版本二现在来分析其实也很明了运用了版本一的原理，换了实现方法，用了伪元素:after添加一个空白内容，并隐藏这个内容。<br>zoom是针对IE6和7触发hasLayout闭合浮动。<br>网上有篇博文<a href="http://www.iyunlu.com/view/css-xhtml/55.html" target="_blank">那些年我们一起清除过的浮动</a>写的非常详细，但是内容太多了，我拿出其中的两段;</p>
+<h4><strong>精益求精方案一：</strong></h4>
+<p>相对于空标签闭合浮动的方法代码似乎还是有些冗余，通过查询发现Unicode字符里有一个“零宽度空格”，也就是U+200B ，这个字符本身是不可见的，所以我们完全可以省略掉 visibility:hidden了</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="tag">clearfix</span><span class="pseudo">:after</span> <span class="rules">{<span class="rule"><span class="attribute">content</span>:<span class="value"><span class="string">"\200B"</span>;</span></span> <span class="rule"><span class="attribute">display</span>:<span class="value">block;</span></span> <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">clear</span>:<span class="value">both;</span></span> <span class="rule">}</span></span>
+<span class="class">.clearfix</span> <span class="rules">{ <span class="rule">*<span class="attribute">zoom</span>:<span class="value"><span class="number">1</span>;</span></span> <span class="rule">}</span></span>.
+</pre></td></tr></table></figure>
+
+<h4><strong>精益求精方案二：</strong></h4>
+<p>一下方案中:before是用来处理margin边距重叠的问题，这个是创建BFC自带的重叠，不用多说</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="class">.cf</span><span class="pseudo">:before</span>,<span class="class">.cf</span><span class="pseudo">:after</span> <span class="rules">{
+<span class="rule"><span class="attribute">content</span>:<span class="value"><span class="string">""</span>;</span></span>
+<span class="rule"><span class="attribute">display</span>:<span class="value">table;</span></span>
+<span class="rule">}</span></span>
+<span class="class">.cf</span><span class="pseudo">:after</span> <span class="rules">{ <span class="rule"><span class="attribute">clear</span>:<span class="value">both;</span></span> <span class="rule">}</span></span><span class="comment">/* For IE 6/7 (trigger hasLayout) */</span>
+<span class="class">.cf</span> <span class="rules">{ <span class="rule"><span class="attribute">zoom</span>:<span class="value"><span class="number">1</span>;</span></span> <span class="rule">}</span></span>
+</pre></td></tr></table></figure>
+
+<p>参考资料:<br><a href="http://www.iyunlu.com/view/css-xhtml/55.html" target="_blank"><a href="http://www.iyunlu.com/view/css-xhtml/55.html">http://www.iyunlu.com/view/css-xhtml/55.html</a></a></p>
+
+      
+     
+    </div>
+    <footer>
+             
+        
+  
+  <div class="tags">
+    <a href="/tags/float/">float</a>
+  </div>
+
+        <!--
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+-->
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+
+<!--
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yutaoo.com/2013/12/03/close-float/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+-->
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yutao"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- Duoshuo Comment END -->
+
+</article></div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS/">CSS</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BFC/">BFC</a><small>1</small></li>
+  
+    <li><a href="/tags/css/">css</a><small>1</small></li>
+  
+    <li><a href="/tags/float/">float</a><small>1</small></li>
+  
+    <li><a href="/tags/hasLayout/">hasLayout</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Enter一下本站搜索">
+    <input type="hidden" name="q" value="site:yutaoo.com">
+  </form>
+</div>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 yutao
+  
+</div>
+<div class="clearfix"></div>
+
+
+
+</footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8df15df49e6d70ffe372427cebadd8b8' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>
