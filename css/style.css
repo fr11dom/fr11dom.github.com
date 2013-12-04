@@ -146,7 +146,8 @@ a:hover {
    border-bottom: solid 1px #c43c3c;
 }
 article {
-  -webkit-box-shadow: 1px 2px 3px #ddd;
+  border:solid 1px #eee;
+  -webkit-box-shadow: 1px 2px 8px #ddd;
   box-shadow: 1px 2px 3px #ddd;
   background: #fff;
 }
