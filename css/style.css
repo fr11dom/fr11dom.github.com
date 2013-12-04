@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background: rgba(245, 226, 226, 0.12);
+  background: #f6f6f6;
   color: #666;
   font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 15px;
@@ -139,9 +139,9 @@ a:hover {
    border-bottom: solid 1px #c43c3c;
 }
 article {
-  border:solid 1px #eee;
-  -webkit-box-shadow: 1px 2px 8px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
+  border:solid 1px #e9e9e9;
+  -webkit-box-shadow: 1px 2px 3px #e9e9e9;
+  box-shadow: 1px 2px 3px #e9e9e9;
   background: #fff;
   margin-bottom:20px;
 }
