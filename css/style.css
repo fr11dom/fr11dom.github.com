@@ -3,9 +3,9 @@
   padding: 0;
 }
 body {
-  background: #fff;
+  background: rgba(245, 226, 226, 0.12);
   color: #666;
-  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
+  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 15px;
   text-shadow: 0 0 1px transparent;
 }
