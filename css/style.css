@@ -12,8 +12,8 @@
 body {
   background: #fff;
   color: #666;
-  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-  font-size: 14px;
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
+  font-size: 15px;
   text-shadow: 0 0 1px transparent;
 }
 @media screen and (max-width: 1260px) {
@@ -123,7 +123,7 @@ a:hover {
   margin-top: 10px;
 }
 #header #main-nav {
-  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
   line-height: 2.5em;
 }
 #header #main-nav ul {
@@ -286,7 +286,7 @@ article header .author:before {
 }
 article header time {
   color: #666;
-  font: 0.9em "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 0.9em "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
   margin-right: 10px;
 }
 article header time:before {
@@ -483,6 +483,10 @@ article footer a:before {
   padding-right: 10px;
   vertical-align: middle;
 }
+article footer a.more-link{
+  color:#c43c3c;
+  border-bottom:solid 1px #c43c3c;
+}
 article footer a.more-link:before {
   content: '\f054';
 }
@@ -530,7 +534,7 @@ article footer .addthis iframe {
   padding: 5px 10px;
   background: #ddd;
   color: #999;
-  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
   text-shadow: 0 0 1px #fff;
   margin-bottom: 50px;
 }
@@ -611,7 +615,7 @@ article footer .addthis iframe {
 }
 #sidebar .search input {
   background: #fff;
-  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
   font-size: 1em;
   padding: 10px 15px;
   border: solid 1px #eee;
@@ -666,7 +670,7 @@ article footer .addthis iframe {
 #footer {
   color: #999;
   margin-bottom: 50px;
-  font: 0.9em/1.6 "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 0.9em/1.6 "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
   text-shadow: 0 0 1px #fff;
 }
 .entry .gist {
