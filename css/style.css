@@ -150,6 +150,7 @@ article {
   -webkit-box-shadow: 1px 2px 8px #ddd;
   box-shadow: 1px 2px 3px #ddd;
   background: #fff;
+  margin-bottom:20px;
 }
 article.page {
   padding-left: 20px;
