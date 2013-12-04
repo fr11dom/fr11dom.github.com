@@ -555,24 +555,16 @@ article footer .addthis iframe {
 .archive-title {
   color: #999;
   font-weight: normal;
-  margin-bottom: 20px;
   text-shadow: 0 0 1px #fff;
 }
 
 .archive {
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
-  border-bottom: 1px solid #ddd;
   margin-bottom: 20px;
 }
 .archive article {
-  border: solid 1px #eee; 
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
+  padding-bottom: 20px
 }
-.archive article .post-content {
-  margin-bottom: 0;
-}
+
 #sidebar {
   width: 270px;
   line-height: 1.8em;

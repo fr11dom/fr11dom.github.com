@@ -71,20 +71,39 @@
     <a href="/categories/css/">css</a>
   </div>
 
-        <time class="alignleft" datetime="2013-12-02T08:02:00.000Z">
-            2013-12-02 16:02
+        <time class="alignleft" datetime="2013-12-02T08:20:00.000Z">
+            2013-12-02 16:20
         </time>
         <div class="author">yutao</div>
       
     </header>
     <div class="entry">
+      2013/12/02/css-pictxt/
       
-      
+        <p>根据下图，写出html和css:<br><img src="/fancybox/pictxt.png" border="1"/><br>图文混排在各种类型的网站中都能见到，因此这道笔试题看起来确实是在考察一个前端在页面布局上的基本能力。<a id="more"></a><br>我起初也是这样认为，直到在<a href="http://hikejun.com/" target="_blank">@kejun</a>博客里看到<a href="http://hikejun.com/blog/2011/10/26/近期面试感受/" target="_blank">近期面试感受</a>这篇文章。<br>常规的做法就不提了，看看<a href="http://hikejun.com/" target="_blank">@kejun</a>的做法:<br>html:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"pic"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</pre></td></tr></table></figure>
+
+<p>css:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="class">.item</span><span class="rules">{<span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden;</span></span><span class="rule">}</span></span>
+<span class="class">.item</span> <span class="class">.pic</span> <span class="rules">{ <span class="rule"><span class="attribute">float</span>:<span class="value">left;</span></span><span class="rule"><span class="attribute">margin-right</span>:<span class="value"><span class="number">10</span>px;</span></span> <span class="rule">}</span></span>
+<span class="class">.item</span> <span class="class">.content</span> <span class="rules">{ <span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden;</span></span><span class="rule"><span class="attribute">zoom</span>:<span class="value"><span class="number">1</span>;</span></span> <span class="rule">}</span></span>
+</pre></td></tr></table></figure>
+
+<p>因为之前写了<a href="/2013/12/02/block-formatting-context/" >理解Block Formatting Context</a>一文，因此他的写法非常容易理解。<br>item上的overflow是为闭合浮动，content上的overflow防止容器覆盖</p>
 
       
-        <p>根据下图，写出html和css:</p>
-
-      
+     
     </div>
     <footer>
              
