@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   
   <meta name="baidu-site-verification" content="F07nhovFpt" />
-  <title>重读《javaScript高级程序设计》 | 茧单网志</title>
+  <title>一道前端笔试题-图文混排 | 茧单网志</title>
   <meta name="author" content="yutao">
   
   <meta name="description" content="余涛的博客-勤思考-多记录-好记性不如烂笔头。">
@@ -12,7 +12,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="重读《javaScript高级程序设计》"/>
+  <meta property="og:title" content="一道前端笔试题-图文混排"/>
   <meta property="og:site_name" content="茧单网志"/>
 
   
@@ -62,25 +62,45 @@
     <header class="clearfix">
       
   
-    <h2 class="title">重读《javaScript高级程序设计》</h2>
+    <h2 class="title">一道前端笔试题-图文混排</h2>
   
 
       
         
   
   <div class="categories">
-    <a href="/categories/javaScript/">javaScript</a>
+    <a href="/categories/CSS/">CSS</a>
   </div>
 
-        <time class="alignleft" datetime="2013-12-04T04:34:00.000Z">
-            2013-12-04 12:34
+        <time class="alignleft" datetime="2013-10-02T08:20:00.000Z">
+            2013-10-02 16:20
         </time>
         <div class="author">yutao</div>
       
     </header>
     <div class="entry">
       
-        <p>很多书每读一遍你都会有新的收获，比如《javaScript高级程序设计》。<br>现做下记录，加深记忆，当作总结。<br>1.web浏览器只是ECMAScript实现可能的宿主环境之一。<br>2.完整的javaScript实现包含三部分：核心（ECMAScript）、DOM、BOM。<br>BOM包含的对象<br>3.ECMAScript包含5种简单数据类型：Undefined、Null、Boolean、Number、String和一种复杂类型Object。<br>4.我们创建的每个函数都有个prototype属性，这个属性是一个指针指向一个对象，它包含由特定类型实例共享的属性和方法。</p>
+        <p>根据下图，写出html和css:<br><img src="/img/pictxt.png" /><br>图文混排在各种类型的网站中都能见到，因此这道笔试题看起来确实是在考察一个前端在页面布局上的基本能力。<a id="more"></a><br>我起初也是这样认为，直到在<a href="http://hikejun.com/" target="_blank">@kejun</a>博客里看到<a href="http://hikejun.com/blog/2011/10/26/近期面试感受/" target="_blank">近期面试感受</a>这篇文章。<br>常规的做法就不提了，看看<a href="http://hikejun.com/" target="_blank">@kejun</a>的做法:<br>html:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"pic"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</pre></td></tr></table></figure>
+
+<p>css:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="class">.item</span><span class="rules">{<span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden;</span></span><span class="rule">}</span></span>
+<span class="class">.item</span> <span class="class">.pic</span> <span class="rules">{ <span class="rule"><span class="attribute">float</span>:<span class="value">left;</span></span><span class="rule"><span class="attribute">margin-right</span>:<span class="value"><span class="number">10</span>px;</span></span> <span class="rule">}</span></span>
+<span class="class">.item</span> <span class="class">.content</span> <span class="rules">{ <span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden;</span></span><span class="rule"><span class="attribute">zoom</span>:<span class="value"><span class="number">1</span>;</span></span> <span class="rule">}</span></span>
+</pre></td></tr></table></figure>
+
+<p>因为之前写了<a href="/2013/12/02/block-formatting-context/" >理解Block Formatting Context</a>一文，因此他的写法非常容易理解。<br>item上的overflow是为闭合浮动，content上的overflow防止容器覆盖</p>
 
       
      
@@ -90,7 +110,7 @@
         
   
   <div class="tags">
-    <a href="/tags/javaScript高级程序设计/">javaScript高级程序设计</a>
+    <a href="/tags/css/">css</a>
   </div>
 
         <!--
@@ -132,7 +152,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yutaoo.com/2013/12/04/reading-professional-js-for-web-Developers/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yutaoo.com/2013/10/02/css-pictxt/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
@@ -160,7 +180,11 @@ var duoshuoQuery = {short_name:"yutao"};
   <h3 class="title">分类</h3>
   <ul class="entry">
   
+    <li><a href="/categories/Angularjs/">Angularjs</a><small>1</small></li>
+  
     <li><a href="/categories/CSS/">CSS</a><small>3</small></li>
+  
+    <li><a href="/categories/jQuery/">jQuery</a><small>1</small></li>
   
     <li><a href="/categories/javaScript/">javaScript</a><small>2</small></li>
   
@@ -173,13 +197,19 @@ var duoshuoQuery = {short_name:"yutao"};
   <h3 class="title">标签</h3>
   <ul class="entry">
   
+    <li><a href="/tags/Angularjs/">Angularjs</a><small>1</small></li>
+  
     <li><a href="/tags/BFC/">BFC</a><small>1</small></li>
   
     <li><a href="/tags/css/">css</a><small>1</small></li>
   
+    <li><a href="/tags/filters/">filters</a><small>1</small></li>
+  
     <li><a href="/tags/float/">float</a><small>1</small></li>
   
     <li><a href="/tags/hasLayout/">hasLayout</a><small>1</small></li>
+  
+    <li><a href="/tags/jQuery插件/">jQuery插件</a><small>1</small></li>
   
     <li><a href="/tags/javaScript高级程序设计/">javaScript高级程序设计</a><small>1</small></li>
   

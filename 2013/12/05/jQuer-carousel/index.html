@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   
   <meta name="baidu-site-verification" content="F07nhovFpt" />
-  <title>清除浮动记录 | 茧单网志</title>
+  <title>jQuery轮播插件 | 茧单网志</title>
   <meta name="author" content="yutao">
   
   <meta name="description" content="余涛的博客-勤思考-多记录-好记性不如烂笔头。">
@@ -12,7 +12,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="清除浮动记录"/>
+  <meta property="og:title" content="jQuery轮播插件"/>
   <meta property="og:site_name" content="茧单网志"/>
 
   
@@ -62,30 +62,43 @@
     <header class="clearfix">
       
   
-    <h2 class="title">清除浮动记录</h2>
+    <h2 class="title">jQuery轮播插件</h2>
   
 
       
         
   
   <div class="categories">
-    <a href="/categories/CSS/">CSS</a>
+    <a href="/categories/jQuery/">jQuery</a>
   </div>
 
-        <time class="alignleft" datetime="2013-12-03T00:06:00.000Z">
-            2013-12-03 08:06
+        <time class="alignleft" datetime="2013-12-05T02:06:00.000Z">
+            2013-12-05 10:06
         </time>
         <div class="author">yutao</div>
       
     </header>
     <div class="entry">
       
-        <p>前端绕不开浮动这个话题，之前也都是拿来主义，所以心里一直有个坎，我其实不知道清除浮动的原理。<br>首先有“清除浮动”和“闭合浮动”两种叫法，这两种叫法我觉得随意因为都是为了实现一个目的。<a id="more"></a></p>
-<h4><strong>浮动的影响</strong></h4>
-<pre><code>1.高度变0（浮动的元素脱离普通流，通常导致父容器没内容支撑而高度变0）
-2.影响兄弟元素的布局(尤其是一些IE浏览器)</code></pre>
-<h4><strong>清除浮动的影响</strong></h4>
-<p>关于清除浮动的影响网上有很多版本，我用过两个版本；<br>版本一:</p>
+        <p>把公司之前的轮播图改版了，练手写了个轮播插件，UI木有资源，自己随意做…<br>效果如下：</p>
+<p><iframe style="width: 100%; height: 424px" src="http://sandbox.runjs.cn/show/ysorhhjt" allowfullscreen="allowfullscreen" frameborder="0"></iframe><a id="more"></a><br><a href="http://runjs.cn/code/ysorhhjt" target="_blank">jQuery轮播图的源码</a></p>
+<h4><strong>简单的功能：</strong></h4>
+<pre><code>1.左右按钮点击切换
+2.点击略缩图切换</code></pre>
+<h4><strong>简单的接口</strong></h4>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="char">$(</span><span class="comment">"#carousel"</span>).<span class="class">Ycarousel</span>({
+	<span class="method">visibItemNum:</span> <span class="number">6</span>,//略缩图个数 int;默认值<span class="number">3</span>
+	<span class="method">loop:</span> <span class="keyword">true</span>,//是否循环切换(<span class="keyword">true</span>/<span class="keyword">false</span>);默认值<span class="keyword">true</span>
+	<span class="method">horizontal:</span> <span class="keyword">true</span> //水平显示(<span class="keyword">true</span>/<span class="keyword">false</span>);默认值<span class="keyword">true</span>
+});
+</pre></td></tr></table></figure>
+
+<h4><strong>用法</strong></h4>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -94,57 +107,51 @@
 6
 7
 8
-</pre></td><td class="code"><pre>.left{float:left}
-.right{float:right}
-.clear{clear:both}
-<span class="tag">&lt;<span class="title">div</span>&gt;</span>
-	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"left"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"right"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"clear"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="code"><pre>html格式：
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"carousel"</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"img-show"</span>&gt;</span>
+		<span class="comment">&lt;!--class=display-Container 必须--&gt;</span>
+		<span class="tag">&lt;<span class="title">img</span> <span class="attribute">class</span>=<span class="value">"display-Container"</span> <span class="attribute">src</span>=<span class="value">"images/02.jpg"</span> <span class="attribute">title</span>=<span class="value">"这是大图"</span>/&gt;</span>
+	<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"nav-wrap clearfix"</span>&gt;</span>
+		<span class="comment">&lt;!--class=js_prevbar 必须--&gt;</span>
+		<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span> <span class="attribute">class</span>=<span class="value">"left bradiusl bar-wrap js_prevbar"</span> <span class="attribute">title</span>=<span class="value">"点击向左翻"</span>&gt;</span>&lt;<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+		<span class="comment">&lt;!--class=js_visiblearea 必须--&gt;</span>
+		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"left js_visiblearea visible-wrap"</span>&gt;</span>
+			<span class="comment">&lt;!--class=js_inarea 必须--&gt;</span>
+			<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"js_inarea sub-wrap clearfix"</span>&gt;</span>
+				<span class="comment">&lt;!--rel='big-img-url' 必须--&gt;</span>
+				<span class="tag">&lt;<span class="title">li</span> <span class="attribute">rel</span>=<span class="value">"images/01.jpg"</span>&gt;</span>
+					<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"images/001.jpg"</span> <span class="attribute">alt</span>=<span class="value">"这里风景独好"</span>/&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+				<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+			<span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+		<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+		<span class="comment">&lt;!--class=js_nextbar 必须--&gt;</span>
+		<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span> <span class="attribute">class</span>=<span class="value">"left bradiusl bar-wrap js_nextbar"</span> <span class="attribute">title</span>=<span class="value">"点击向左翻"</span>&gt;</span>&lt;<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+	<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+js调用：
+$("#carousel").Ycarousel();
 </pre></td></tr></table></figure>
 
-<p>版本二:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-</pre></td><td class="code"><pre>.clearfix:after {clear:both; content:' '; display:block; font-size:0; line-height:0; visibility:hidden; width:0; height:0}
-* html .clearfix {zoom:1}
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"clearfix"</span>&gt;</span>
-	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"left"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"right"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</pre></td></tr></table></figure>
-
-<p>版本一是最简单的，效果很好，也很好理解，不过多个空div就是不爽，而且明摆着那结构做样式的事情。<br>版本二现在来分析其实也很明了运用了版本一的原理，换了实现方法，用了伪元素:after添加一个空白内容，并隐藏这个内容。<br>zoom是针对IE6和7触发hasLayout闭合浮动。<br>网上有篇博文<a href="http://www.iyunlu.com/view/css-xhtml/55.html" target="_blank">那些年我们一起清除过的浮动</a>写的非常详细，但是内容太多了，我拿出其中的两段;</p>
-<h4><strong>精益求精方案一：</strong></h4>
-<p>相对于空标签闭合浮动的方法代码似乎还是有些冗余，通过查询发现Unicode字符里有一个“零宽度空格”，也就是U+200B ，这个字符本身是不可见的，所以我们完全可以省略掉 visibility:hidden了</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-</pre></td><td class="code"><pre><span class="tag">clearfix</span><span class="pseudo">:after</span> <span class="rules">{<span class="rule"><span class="attribute">content</span>:<span class="value"><span class="string">"\200B"</span>;</span></span> <span class="rule"><span class="attribute">display</span>:<span class="value">block;</span></span> <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">clear</span>:<span class="value">both;</span></span> <span class="rule">}</span></span>
-<span class="class">.clearfix</span> <span class="rules">{ <span class="rule">*<span class="attribute">zoom</span>:<span class="value"><span class="number">1</span>;</span></span> <span class="rule">}</span></span>.
-</pre></td></tr></table></figure>
-
-<h4><strong>精益求精方案二：</strong></h4>
-<p>一下方案中:before是用来处理margin边距重叠的问题，这个是创建BFC自带的重叠，不用多说</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-</pre></td><td class="code"><pre><span class="class">.cf</span><span class="pseudo">:before</span>,<span class="class">.cf</span><span class="pseudo">:after</span> <span class="rules">{
-<span class="rule"><span class="attribute">content</span>:<span class="value"><span class="string">""</span>;</span></span>
-<span class="rule"><span class="attribute">display</span>:<span class="value">table;</span></span>
-<span class="rule">}</span></span>
-<span class="class">.cf</span><span class="pseudo">:after</span> <span class="rules">{ <span class="rule"><span class="attribute">clear</span>:<span class="value">both;</span></span> <span class="rule">}</span></span><span class="comment">/* For IE 6/7 (trigger hasLayout) */</span>
-<span class="class">.cf</span> <span class="rules">{ <span class="rule"><span class="attribute">zoom</span>:<span class="value"><span class="number">1</span>;</span></span> <span class="rule">}</span></span>
-</pre></td></tr></table></figure>
-
-<p>参考资料:<br><a href="http://www.iyunlu.com/view/css-xhtml/55.html" target="_blank"><a href="http://www.iyunlu.com/view/css-xhtml/55.html">http://www.iyunlu.com/view/css-xhtml/55.html</a></a></p>
+<p>写完插件的感受：<br>插件的难点在于代码功能和结构的设计，好的设计能很好的适应业务的变动。<br>插件的可扩展性，易读性很重要。</p>
 
       
      
@@ -154,7 +161,7 @@
         
   
   <div class="tags">
-    <a href="/tags/float/">float</a>
+    <a href="/tags/jQuery插件/">jQuery插件</a>
   </div>
 
         <!--
@@ -196,7 +203,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yutaoo.com/2013/12/03/close-float/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yutaoo.com/2013/12/05/jQuer-carousel/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>

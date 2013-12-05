@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   
   <meta name="baidu-site-verification" content="F07nhovFpt" />
-  <title>理解Block Formatting Context | 茧单网志</title>
+  <title>Angularjs过滤器-秒数转换为x小时x分钟x秒 | 茧单网志</title>
   <meta name="author" content="yutao">
   
   <meta name="description" content="余涛的博客-勤思考-多记录-好记性不如烂笔头。">
@@ -12,7 +12,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="理解Block Formatting Context"/>
+  <meta property="og:title" content="Angularjs过滤器-秒数转换为x小时x分钟x秒"/>
   <meta property="og:site_name" content="茧单网志"/>
 
   
@@ -62,43 +62,47 @@
     <header class="clearfix">
       
   
-    <h2 class="title">理解Block Formatting Context</h2>
+    <h2 class="title">Angularjs过滤器-秒数转换为x小时x分钟x秒</h2>
   
 
       
         
   
   <div class="categories">
-    <a href="/categories/CSS/">CSS</a>
+    <a href="/categories/Angularjs/">Angularjs</a>
   </div>
 
-        <time class="alignleft" datetime="2013-12-02T01:02:00.000Z">
-            2013-12-02 09:02
+        <time class="alignleft" datetime="2013-12-04T05:06:00.000Z">
+            2013-12-04 13:06
         </time>
         <div class="author">yutao</div>
       
     </header>
     <div class="entry">
       
-        <p>我一直想好好了解下css的Block Formatting Context概念，拖到今天…三个英文单词太长了，简写成BFC吧!<br>关于BFC很多博文都有介绍，我对它不陌生，可我总觉得还有有必要自己在了解一下，记录一下。<a id="more"></a><br>@yuiblog的博文<a href="http://www.yuiblog.com/blog/2010/05/19/css-101-block-formatting-contexts/" target="_blank">CSS 101: Block Formatting Contexts</a>介绍了BFC的几个作用：</p>
-<pre><code>1.BFC prevent margin collapsing(BFC阻止margin的折叠)
-2.BFC contain floats(BFC包含浮动元素)
-3.BFC <span class="operator"><span class="keyword">do</span> <span class="keyword">not</span> overlap floats(BFC不会重叠浮动的元素)</code></pre>
-<p>以上背景，我google后发现一篇翻译<a href="http://www.w3.org/html/ig/zh/wiki/CSS2/visuren#block-formatting" target="_blank">视觉格式化模型#BFC</a>，逐字逐句看了。</p>
-<h4><strong>我得到BFC这么些信息:</strong></h4>
-<pre><code><span class="number">1.</span><span class="class">BFC</span>类似一种属性，某种框（就理解成div或sapn吧）触发这个属性后其内容会创建新的<span class="class">BFC</span>；
-<span class="number">2.</span>能触发<span class="class">BFC</span>这个属性的方法目前有<span class="number">4</span>种；
-    a）能产生浮动框属性，<span class="method">float:</span> left <span class="localvars">| right |</span> inherit。
-    b）产生绝对定位框的属性，<span class="method">position:</span> absolute | fixed。
-    c）产生非块框的块容器的属性，<span class="method">display:</span> inline-blocks | table-cells | table-captions。
-    d）overflow属性的非<span class="string">'visible'</span>块框，<span class="method">overflow:</span> hidden <span class="localvars">| scroll |</span> auto | inherit。 
-<span class="number">3.</span> <span class="class">BFC</span>是属于正常排版（<span class="class">Normal</span> flow）,因此它会一个接一个的垂直摆放。      
-<span class="number">4.</span> 在同一个<span class="class">BFC</span>里，相邻块margin的top和bottom会折叠。
-<span class="number">5.</span> 在<span class="class">BFC</span>里，每个块会紧贴父块的左侧，浮动也不会改变,除非创建新的<span class="class">BFC</span>。</code></pre>
-<p>而用这些原理也很好的解释了BFC的作用。</p>
-<p>BFC阻止margin的折叠的<a href="http://runjs.cn/code/qpk3nm3x" target="_blank">demo</a><br>BFC包含浮动元素的<a href="http://runjs.cn/code/ytjpktlw" target="_blank">demo</a><br>BFC不会重叠浮动的元素的<a href="http://runjs.cn/code/gdr9hubp" target="_blank">demo</a></p>
-<p>这篇博文里没有介绍多少新鲜货；<br>我期望在了解了BFC的原理后能在以后的项目中能友好的理解一些css奇特现象，并且能发掘出更多BFC的作用。<br>对了IE这货有自己的私有属性叫hasLayout跟BFC的功能类似。<br>参考资料:<br><a href="http://www.w3.org/html/ig/zh/wiki/CSS2/visuren" target="_blank"><a href="http://www.w3.org/html/ig/zh/wiki/CSS2/visuren">http://www.w3.org/html/ig/zh/wiki/CSS2/visuren</a></a><br><a href="http://www.yuiblog.com/blog/2010/05/19/css-101-block-formatting-contexts/" target="_blank">CSS 101: Block Formatting Contexts</a></p>
-<p>相关文章：<br><a href="http://www.qianduan.net/comprehensive-haslayout.html" target="_blank">haslayout综合</a><br><a href="http://www.w3ctech.com/p/1101" target="_blank">更加直观地了解hasLayout和BFC</a><br><a href="http://kayosite.com/block-formatting-contexts-in-detail.html" target="_blank">详说 Block Formatting Contexts (块级格式化上下文)</a></p>
+        <p>工作中又遇到这种需求:将秒数转换成X小时X分钟X秒，这个写成filter再也适合不过了。</p>
+<p><iframe style="width: 100%; height: 100px" src="http://sandbox.runjs.cn/show/h3jxrcwq" allowfullscreen="allowfullscreen" frameborder="0"></iframe><br>Angularjs库本身有这么些filters:<br><a id="more"></a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre>currency <span class="comment">//货币格式</span>
+<span class="keyword">date</span> <span class="comment">//日期格式化（这个很丰富）</span>
+<span class="keyword">filter</span> <span class="comment">//这个强大～js搜索</span>
+json <span class="comment">// object 2 json</span>
+limitTo <span class="comment">//类似mysql的limit，js的substr</span>
+lowercase <span class="comment">//转小写</span>
+uppercase <span class="comment">//转大写</span>
+number <span class="comment">//格式化数字，比如将1234567变成1,234,567	</span>
+orderBy <span class="comment">//类似extjs里的表格表头排序</span>
+</pre></td></tr></table></figure>
+
+<p>赶紧试用吧～</p>
 
       
      
@@ -108,7 +112,7 @@
         
   
   <div class="tags">
-    <a href="/tags/BFC/">BFC</a>, <a href="/tags/hasLayout/">hasLayout</a>
+    <a href="/tags/Angularjs/">Angularjs</a>, <a href="/tags/filters/">filters</a>
   </div>
 
         <!--
@@ -150,7 +154,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yutaoo.com/2013/12/02/block-formatting-context/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yutaoo.com/2013/12/04/Angularjs-filters-timeConver/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
