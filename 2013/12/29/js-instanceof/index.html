@@ -5,7 +5,7 @@
   
   <meta name="baidu-site-verification" content="F07nhovFpt" />
   <meta name="google-site-verification" content="XPBpSCJMVs51cCt5_SOtCsgTrLnzIIiQQJgKtk-kRlI" />
-  <title>关于我 | 茧单网志</title>
+  <title>JavaScript类型检测笔记之instanceof | 茧单网志</title>
   <meta name="author" content="yutao">
   
   <meta name="description" content="余涛的博客-勤思考-多记录-好记性不如烂笔头。">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="关于我"/>
+  <meta property="og:title" content="JavaScript类型检测笔记之instanceof"/>
   <meta property="og:site_name" content="茧单网志"/>
 
   
@@ -60,7 +60,7 @@
     
     	
       <li>
-		    <a class="current" href="/about">关于</a>
+		    <a class="" href="/about">关于</a>
       </li>
     
   </ul>
@@ -68,22 +68,54 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="page">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header class="clearfix">
       
   
-    <h2 class="title">关于我</h2>
+    <h2 class="title">JavaScript类型检测笔记之instanceof</h2>
   
 
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+        <time class="alignleft" datetime="2013-12-29T15:38:00.000Z">
+            2013-12-29 23:38
+        </time>
+        <div class="author">yutao</div>
       
     </header>
     <div class="entry">
       
-        <p><img src="/img/me.jpg" style="-webkit-border-radius:50%"></p>
-<p>想做的事情，总是很纠结，纠结怎么做，怎么做才是最好，怎么做才是大家最好！<br>除了纠结也总结不出什么了。</p>
-<p>学完政、史、地，文科生的我总以为这世界就这样了。<br>幸好误打误撞进入互联网，这是一个不断给你惊喜、多彩的世界！<br>我愿意扎根互联网，汲取、分享互联网的种种！<br>目前是一枚web前端，我在路上～！</p>
+        <h3><strong>instanceof</strong></h3>
+<p>语法：object instanceof class<br>作用：判断一个实例是否属于某种类型<br>原理：判断某个构造函数的prototype属性是否存在另外一个要检测对象的原型链上Object.getPrototypeOf(object) === class.prototype<a id="more"></a><br>检测一下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="reserved">function</span> AA(){}
+AA.prototype = {};
+<span class="reserved">var</span> aa = <span class="keyword">new</span> AA();
+console.log(aa <span class="keyword">instanceof</span> AA);<span class="regexp">//</span><span class="literal">true</span>
+console.log(<span class="keyword">new</span> String(<span class="string">'hello'</span>) <span class="keyword">instanceof</span> String); <span class="regexp">//</span><span class="literal">true</span>
+console.log(<span class="keyword">new</span> Number(<span class="number">1</span>) <span class="keyword">instanceof</span> Number); <span class="regexp">//</span><span class="literal">true</span>
+console.log(<span class="reserved">function</span>(){} <span class="keyword">instanceof</span> Function); <span class="regexp">//</span><span class="literal">true</span>
+console.log({} <span class="keyword">instanceof</span> Object); <span class="regexp">//</span><span class="literal">true</span>
+console.log([] <span class="keyword">instanceof</span> Array); <span class="regexp">//</span><span class="literal">true</span>
+</pre></td></tr></table></figure>
+
+<p>instanceof运算符似乎是用来弥补typeof的不足而出现，它可以判断复杂引用类型。两者结合起来用比较靠谱。可是instanceof在多个frame之间还是存在一些问题比如：[] instanceof window.frames[0].Array //false。因为 Array.prototype !== window.frames[0].Array.prototype</p>
+<p>关于instanceof的内容远不止我上面所记录，这次仅考虑它在类型判断方面的作用，期望自己在以后的项目中能深入理解!<br>参考：<br><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/constructor">MDN中文-instanceof</a><br><a target="_blank" href="http://www.ibm.com/developerworks/cn/web/1306_jiangjj_jsinstanceof/">JavaScript instanceof 运算符深入剖析 - IBM</a><br>相关：<br><a target="_blank" href="">JavaScript类型检测笔记之typeof</a><br><a target="_blank" href="">JavaScript类型检测笔记之constructor</a></p>
 
       
      
@@ -91,6 +123,11 @@
     <footer>
              
         
+  
+  <div class="tags">
+    <a href="/tags/类型检测/">类型检测</a>
+  </div>
+
         <!--
   <div class="addthis addthis_toolbox addthis_default_style">
     
@@ -130,7 +167,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yutaoo.com/about/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yutaoo.com/2013/12/29/js-instanceof/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>

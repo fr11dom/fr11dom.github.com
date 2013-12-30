@@ -5,7 +5,7 @@
   
   <meta name="baidu-site-verification" content="F07nhovFpt" />
   <meta name="google-site-verification" content="XPBpSCJMVs51cCt5_SOtCsgTrLnzIIiQQJgKtk-kRlI" />
-  <title>hasLayout | 茧单网志</title>
+  <title>JavaScript类型检测笔记之终极解决方案 | 茧单网志</title>
   <meta name="author" content="yutao">
   
   <meta name="description" content="余涛的博客-勤思考-多记录-好记性不如烂笔头。">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="JavaScript类型检测笔记之终极解决方案"/>
   <meta property="og:site_name" content="茧单网志"/>
 
   
@@ -68,26 +68,129 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><div class="archive">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header class="clearfix">
+      
+  
+    <h2 class="title">JavaScript类型检测笔记之终极解决方案</h2>
+  
+
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+        <time class="alignleft" datetime="2013-12-29T15:38:00.000Z">
+            2013-12-29 23:38
+        </time>
+        <div class="author">yutao</div>
+      
+    </header>
+    <div class="entry">
+      
+        <p>前面三篇文章分别介绍了JavaScript中检测类型的方法，但都不太完美;<br>有大神实在看不下去了，就拿出一个比以往都简单且给力的方法：<a id="more"></a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre>Object.prototype.toString();
+
+function isType(object) {
+  <span class="keyword">return</span> Object.prototype.toString.call(object)
+    .<span class="keyword">match</span>(/^\[object\s(.<span class="variable">*)</span>\]<span class="variable">$/</span>)[<span class="number">1</span>];
+};
+console.<span class="keyword">log</span>(isType(<span class="string">'12'</span>));<span class="comment">//String</span>
+console.<span class="keyword">log</span>(isType([]));<span class="comment">//Array</span>
+console.<span class="keyword">log</span>(isType({}));<span class="comment">//Object</span>
+console.<span class="keyword">log</span>(isType(undefined));<span class="comment">//Undefined</span>
+console.<span class="keyword">log</span>(isType(null));<span class="comment">//Null</span>
+</pre></td></tr></table></figure>
+
+<p>参考：<br><a target="_blank" href="http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray/">how-to-write-a-robust-isarray</a><br>相关：<br><a target="_blank" href="">JavaScript类型检测笔记之typeof</a><br><a target="_blank" href="">JavaScript类型检测笔记之constructor</a><br><a target="_blank" href="">JavaScript类型检测笔记之instanceof</a></p>
+
+      
+     
+    </div>
+    <footer>
+             
+        
+  
+  <div class="tags">
+    <a href="/tags/类型检测/">类型检测</a>
+  </div>
+
+        <!--
+  <div class="addthis addthis_toolbox addthis_default_style">
     
-      <article class="post">
-        <div class="post-content">
-          <header>
-            
-            
-              <h2 class="title"><a href="/2013/12/02/block-formatting-context/">理解Block Formatting Context</a></h2>
-            
-           
-            <time class="alignleft" datetime="2013-12-02T01:02:00.000Z">
-                2013-12-02 09:02
-            </time>
-            <div class="author">yutao</div>
-          
-          </header>
-        </div>
-      </article>
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
     
-  </div></div></div>
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+-->
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+
+<!--
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yutaoo.com/2013/12/29/js-object.prototype.tostring/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+-->
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yutao"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- Duoshuo Comment END -->
+
+</article></div></div>
     <aside id="sidebar" class="alignright">
   
 <div class="widget tag">

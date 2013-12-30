@@ -75,6 +75,180 @@
     <header class="clearfix">
       
   
+    <h2 class="title"><a href="/2013/12/29/js-constructor/">JavaScript类型检测笔记之constructor</a></h2>
+  
+
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+        <time class="alignleft" datetime="2013-12-29T15:38:00.000Z">
+            2013-12-29 23:38
+        </time>
+        <div class="author">yutao</div>
+      
+    </header>
+    <div class="entry">
+      
+        <h3><strong>constructor</strong></h3>
+<p>语法：object.constructor<br>作用：返回创建了当前这个对象实例的构造函数<br>描述：新函数创建时，该函数的原型对象下都会获得一个constructor属性
+      
+     
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/12/29/js-constructor/#more" class="more-link">查看全文</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+
+</article>
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header class="clearfix">
+      
+  
+    <h2 class="title"><a href="/2013/12/29/js-typeof/">JavaScript类型检测笔记之typeof</a></h2>
+  
+
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+        <time class="alignleft" datetime="2013-12-29T15:38:00.000Z">
+            2013-12-29 23:38
+        </time>
+        <div class="author">yutao</div>
+      
+    </header>
+    <div class="entry">
+      
+        <p>JavaScript的类型检测说实话在我目前的工作中的用到很少，除了较为熟悉的typeof可以检测类型，经常在书中或者其他博文里还看到“instanceof”和“constructor”这两个与类型判断相关的词。<br>记录一下以备查阅，以下代码仅在chrome下测试，并且不太严谨，看客轻喷～
+      
+     
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/12/29/js-typeof/#more" class="more-link">查看全文</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+
+</article>
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header class="clearfix">
+      
+  
+    <h2 class="title"><a href="/2013/12/29/js-object.prototype.tostring/">JavaScript类型检测笔记之终极解决方案</a></h2>
+  
+
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+        <time class="alignleft" datetime="2013-12-29T15:38:00.000Z">
+            2013-12-29 23:38
+        </time>
+        <div class="author">yutao</div>
+      
+    </header>
+    <div class="entry">
+      
+        <p>前面三篇文章分别介绍了JavaScript中检测类型的方法，但都不太完美;<br>有大神实在看不下去了，就拿出一个比以往都简单且给力的方法：
+      
+     
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/12/29/js-object.prototype.tostring/#more" class="more-link">查看全文</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+
+</article>
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header class="clearfix">
+      
+  
+    <h2 class="title"><a href="/2013/12/29/js-instanceof/">JavaScript类型检测笔记之instanceof</a></h2>
+  
+
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+        <time class="alignleft" datetime="2013-12-29T15:38:00.000Z">
+            2013-12-29 23:38
+        </time>
+        <div class="author">yutao</div>
+      
+    </header>
+    <div class="entry">
+      
+        <h3><strong>instanceof</strong></h3>
+<p>语法：object instanceof class<br>作用：判断一个实例是否属于某种类型<br>原理：判断某个构造函数的prototype属性是否存在另外一个要检测对象的原型链上Object.getPrototypeOf(object) === class.prototype
+      
+     
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/12/29/js-instanceof/#more" class="more-link">查看全文</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+
+</article>
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header class="clearfix">
+      
+  
     <h2 class="title"><a href="/2013/12/11/five-whys/">五个为什么</a></h2>
   
 
@@ -112,312 +286,11 @@
 
 </article>
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header class="clearfix">
-      
-  
-    <h2 class="title"><a href="/2013/12/05/jQuery-carousel/">jQuery轮播插件</a></h2>
-  
-
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/jQuery/">jQuery</a>
-  </div>
-
-        <time class="alignleft" datetime="2013-12-05T02:06:00.000Z">
-            2013-12-05 10:06
-        </time>
-        <div class="author">yutao</div>
-      
-    </header>
-    <div class="entry">
-      
-        <p>轮播图这种东西是网站总要用到，产品有需求，UI木有资源，自己做一下吧…<br>效果如下：</p>
-<p><iframe style="width: 100%; height: 424px" src="http://sandbox.runjs.cn/show/ysorhhjt" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-      
-     
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/12/05/jQuery-carousel/#more" class="more-link">查看全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-
-</article>
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header class="clearfix">
-      
-  
-    <h2 class="title"><a href="/2013/12/04/Angularjs-filters-timeConver/">Angularjs过滤器-秒数转换为x小时x分钟x秒</a></h2>
-  
-
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/Angularjs/">Angularjs</a>
-  </div>
-
-        <time class="alignleft" datetime="2013-12-04T05:06:00.000Z">
-            2013-12-04 13:06
-        </time>
-        <div class="author">yutao</div>
-      
-    </header>
-    <div class="entry">
-      
-        <p>工作中又遇到这种需求:将秒数转换成X小时X分钟X秒，这个写成filter再也适合不过了。</p>
-<p><iframe style="width: 100%; height: 100px" src="http://sandbox.runjs.cn/show/h3jxrcwq" allowfullscreen="allowfullscreen" frameborder="0"></iframe><br>Angularjs库本身有这么些filters:<br>
-      
-     
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/12/04/Angularjs-filters-timeConver/#more" class="more-link">查看全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-
-</article>
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header class="clearfix">
-      
-  
-    <h2 class="title"><a href="/2013/12/03/close-float/">清除浮动记录</a></h2>
-  
-
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/CSS/">CSS</a>
-  </div>
-
-        <time class="alignleft" datetime="2013-12-03T00:06:00.000Z">
-            2013-12-03 08:06
-        </time>
-        <div class="author">yutao</div>
-      
-    </header>
-    <div class="entry">
-      
-        <p>前端绕不开浮动这个话题，之前也都是拿来主义，所以心里一直有个坎。<br>首先有“清除浮动”和“闭合浮动”两种叫法，这两种叫法我觉得随意因为都是为了实现一个目的。
-      
-     
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/12/03/close-float/#more" class="more-link">查看全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-
-</article>
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header class="clearfix">
-      
-  
-    <h2 class="title"><a href="/2013/12/02/block-formatting-context/">理解Block Formatting Context</a></h2>
-  
-
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/CSS/">CSS</a>
-  </div>
-
-        <time class="alignleft" datetime="2013-12-02T01:02:00.000Z">
-            2013-12-02 09:02
-        </time>
-        <div class="author">yutao</div>
-      
-    </header>
-    <div class="entry">
-      
-        <p>我一直想好好了解下css的Block Formatting Context概念，拖到今天…三个英文单词太长了，简写成BFC吧!<br>关于BFC很多博文都有介绍，我对它不陌生，可我总觉得还有有必要自己在了解一下，记录一下。
-      
-     
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/12/02/block-formatting-context/#more" class="more-link">查看全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-
-</article>
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header class="clearfix">
-      
-  
-    <h2 class="title"><a href="/2013/10/02/css-pictxt/">一道前端笔试题-图文混排</a></h2>
-  
-
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/CSS/">CSS</a>
-  </div>
-
-        <time class="alignleft" datetime="2013-10-02T08:20:00.000Z">
-            2013-10-02 16:20
-        </time>
-        <div class="author">yutao</div>
-      
-    </header>
-    <div class="entry">
-      
-        <p>根据下图，写出html和css:<br><img src="/img/pictxt.png" /><br>图文混排在各种类型的网站中都能见到，因此这道笔试题看起来确实是在考察一个前端在页面布局上的基本能力。
-      
-     
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/10/02/css-pictxt/#more" class="more-link">查看全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-
-</article>
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header class="clearfix">
-      
-  
-    <h2 class="title"><a href="/2013/09/10/js-loop-for/">一道javascript基础问答题</a></h2>
-  
-
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/javaScript/">javaScript</a>
-  </div>
-
-        <time class="alignleft" datetime="2013-09-10T11:22:00.000Z">
-            2013-09-10 19:22
-        </time>
-        <div class="author">yutao</div>
-      
-    </header>
-    <div class="entry">
-      
-        <p>我有时候会去百度知道javaScript分类逛一逛，因为里面会有很多小伙伴问一些基础题。<br>我会选择一些我感兴趣的去来回答，因为可以帮助我重温基础。
-      
-     
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/09/10/js-loop-for/#more" class="more-link">查看全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-
-</article>
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header class="clearfix">
-      
-  
-    <h2 class="title"><a href="/2013/07/04/reading-professional-js-for-web-Developers/">重读《javaScript高级程序设计》</a></h2>
-  
-
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/javaScript/">javaScript</a>
-  </div>
-
-        <time class="alignleft" datetime="2013-07-04T04:34:00.000Z">
-            2013-07-04 12:34
-        </time>
-        <div class="author">yutao</div>
-      
-    </header>
-    <div class="entry">
-      
-        <p>很多书每读一遍你都会有新的收获，比如《javaScript高级程序设计》。<br>现做下记录，加深记忆，当作总结。<br>1.web浏览器只是ECMAScript实现可能的宿主环境之一。<br>2.完整的javaScript实现包含三部分：核心（ECMAScript）、DOM、BOM。
-      
-     
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/07/04/reading-professional-js-for-web-Developers/#more" class="more-link">查看全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-
-</article>
-
 
 <nav id="pagination">
   
+  
+    <a href="/page/2/" class="alignright next">下一页</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
@@ -431,9 +304,9 @@
   
     <li><a href="/categories/CSS/">CSS</a><small>3</small></li>
   
-    <li><a href="/categories/jQuery/">jQuery</a><small>1</small></li>
+    <li><a href="/categories/JavaScript/">JavaScript</a><small>6</small></li>
   
-    <li><a href="/categories/javaScript/">javaScript</a><small>2</small></li>
+    <li><a href="/categories/jQuery/">jQuery</a><small>1</small></li>
   
     <li><a href="/categories/感悟/">感悟</a><small>1</small></li>
   
@@ -445,7 +318,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/Angularjs/" style="font-size: NaNpx;">Angularjs</a><a href="/tags/BFC/" style="font-size: NaNpx;">BFC</a><a href="/tags/css/" style="font-size: NaNpx;">css</a><a href="/tags/filters/" style="font-size: NaNpx;">filters</a><a href="/tags/float/" style="font-size: NaNpx;">float</a><a href="/tags/hasLayout/" style="font-size: NaNpx;">hasLayout</a><a href="/tags/jQuery插件/" style="font-size: NaNpx;">jQuery插件</a><a href="/tags/javaScript高级程序设计/" style="font-size: NaNpx;">javaScript高级程序设计</a><a href="/tags/loop/" style="font-size: NaNpx;">loop</a><a href="/tags/感悟/" style="font-size: NaNpx;">感悟</a>
+    <a href="/tags/Angularjs/" style="font-size: 10.00px;">Angularjs</a><a href="/tags/BFC/" style="font-size: 10.00px;">BFC</a><a href="/tags/css/" style="font-size: 10.00px;">css</a><a href="/tags/filters/" style="font-size: 10.00px;">filters</a><a href="/tags/float/" style="font-size: 10.00px;">float</a><a href="/tags/hasLayout/" style="font-size: 10.00px;">hasLayout</a><a href="/tags/jQuery插件/" style="font-size: 10.00px;">jQuery插件</a><a href="/tags/javaScript高级程序设计/" style="font-size: 10.00px;">javaScript高级程序设计</a><a href="/tags/loop/" style="font-size: 10.00px;">loop</a><a href="/tags/感悟/" style="font-size: 10.00px;">感悟</a><a href="/tags/类型检测/" style="font-size: 20.00px;">类型检测</a>
   </div>
 </div>
 

@@ -5,7 +5,7 @@
   
   <meta name="baidu-site-verification" content="F07nhovFpt" />
   <meta name="google-site-verification" content="XPBpSCJMVs51cCt5_SOtCsgTrLnzIIiQQJgKtk-kRlI" />
-  <title>关于我 | 茧单网志</title>
+  <title>JavaScript类型检测笔记之typeof | 茧单网志</title>
   <meta name="author" content="yutao">
   
   <meta name="description" content="余涛的博客-勤思考-多记录-好记性不如烂笔头。">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="关于我"/>
+  <meta property="og:title" content="JavaScript类型检测笔记之typeof"/>
   <meta property="og:site_name" content="茧单网志"/>
 
   
@@ -60,7 +60,7 @@
     
     	
       <li>
-		    <a class="current" href="/about">关于</a>
+		    <a class="" href="/about">关于</a>
       </li>
     
   </ul>
@@ -68,22 +68,73 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="page">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header class="clearfix">
       
   
-    <h2 class="title">关于我</h2>
+    <h2 class="title">JavaScript类型检测笔记之typeof</h2>
   
 
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+        <time class="alignleft" datetime="2013-12-29T15:38:00.000Z">
+            2013-12-29 23:38
+        </time>
+        <div class="author">yutao</div>
       
     </header>
     <div class="entry">
       
-        <p><img src="/img/me.jpg" style="-webkit-border-radius:50%"></p>
-<p>想做的事情，总是很纠结，纠结怎么做，怎么做才是最好，怎么做才是大家最好！<br>除了纠结也总结不出什么了。</p>
-<p>学完政、史、地，文科生的我总以为这世界就这样了。<br>幸好误打误撞进入互联网，这是一个不断给你惊喜、多彩的世界！<br>我愿意扎根互联网，汲取、分享互联网的种种！<br>目前是一枚web前端，我在路上～！</p>
+        <p>JavaScript的类型检测说实话在我目前的工作中的用到很少，除了较为熟悉的typeof可以检测类型，经常在书中或者其他博文里还看到“instanceof”和“constructor”这两个与类型判断相关的词。<br>记录一下以备查阅，以下代码仅在chrome下测试，并且不太严谨，看客轻喷～<a id="more"></a><br>感觉篇幅有点长，分成了几部分：</p>
+<h3><strong>typeof</strong></h3>
+<p>语法：typeof 操作数 或者typeof(操作数)<br>作用：返回一个字符串来代表此操作数的类型<br>检测一下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre>console.log(<span class="keyword">typeof</span> <span class="number">1</span>); <span class="regexp">//</span>number
+console.log(<span class="keyword">typeof</span> <span class="string">'hello'</span>); <span class="regexp">//</span>string
+console.log(<span class="keyword">typeof</span> <span class="literal">true</span>); <span class="regexp">//</span>boolean
+console.log(<span class="keyword">typeof</span> <span class="literal">undefined</span>); <span class="regexp">//</span><span class="literal">undefined</span>
+console.log(<span class="keyword">typeof</span> <span class="reserved">function</span>(){}); <span class="regexp">//</span><span class="reserved">function</span>
+console.log(<span class="keyword">typeof</span> <span class="literal">null</span>); <span class="regexp">//</span>object
+console.log(<span class="keyword">typeof</span> {}); <span class="regexp">//</span>object
+console.log(<span class="keyword">typeof</span> []); <span class="regexp">//</span>object
+console.log(<span class="keyword">typeof</span> <span class="keyword">new</span> String(<span class="string">'hello'</span>)); <span class="regexp">//</span>object
+console.log(<span class="keyword">typeof</span> <span class="keyword">new</span> Number(<span class="number">1</span>)); <span class="regexp">//</span>object
+</pre></td></tr></table></figure>
+
+<p>根据以上结果，直白的说用typeof是不能完全准确的判断一种数据的类型。<br>假设我有一个判断String类型的方法是用typeof来实现的</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="reserved">var</span> getType = <span class="reserved">function</span>(str){
+	<span class="keyword">return</span> <span class="keyword">typeof</span>(str) == <span class="string">'string'</span>;
+}
+同事A：<span class="reserved">var</span> a = <span class="string">'hello'</span>;
+console.log(getType(a));<span class="regexp">//</span><span class="literal">true</span>
+同事B：<span class="reserved">var</span> b = <span class="keyword">new</span> String(<span class="string">'hello'</span>);
+console.log(getType(b));<span class="regexp">//</span><span class="literal">false</span>
+</pre></td></tr></table></figure>
+
+<p>可能你会觉得同事B比较新手，那你是对的。<br>可能你会觉得你这前端没规范，那你也是对的。<br>所以这种代码确实会出现。<br>更不用说当我用typeof来判断数组类型了。<br><strong>用typeof来判断基本类型Number、Boolean、String、Undefined、Null基本可行(null还要再做处理)，用typeof来判断引用类型Object、Array、Function是不靠谱的全部返回object</strong><br>相关：<br><a target="_blank" href="">JavaScript类型检测笔记之constructor</a><br><a target="_blank" href="">JavaScript类型检测笔记之instanceof</a></p>
 
       
      
@@ -91,6 +142,11 @@
     <footer>
              
         
+  
+  <div class="tags">
+    <a href="/tags/类型检测/">类型检测</a>
+  </div>
+
         <!--
   <div class="addthis addthis_toolbox addthis_default_style">
     
@@ -130,7 +186,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yutaoo.com/about/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yutaoo.com/2013/12/29/js-typeof/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
