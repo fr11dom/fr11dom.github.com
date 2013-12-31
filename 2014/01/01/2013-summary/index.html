@@ -5,7 +5,7 @@
   
   <meta name="baidu-site-verification" content="F07nhovFpt" />
   <meta name="google-site-verification" content="XPBpSCJMVs51cCt5_SOtCsgTrLnzIIiQQJgKtk-kRlI" />
-  <title>JavaScript类型检测笔记之constructor | 茧单网志</title>
+  <title>欣喜的2013 | 茧单网志</title>
   <meta name="author" content="yutao">
   
   <meta name="description" content="余涛的博客-勤思考-多记录-好记性不如烂笔头。">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="JavaScript类型检测笔记之constructor"/>
+  <meta property="og:title" content="欣喜的2013"/>
   <meta property="og:site_name" content="茧单网志"/>
 
   
@@ -74,78 +74,31 @@
     <header class="clearfix">
       
   
-    <h2 class="title">JavaScript类型检测笔记之constructor</h2>
+    <h2 class="title">欣喜的2013</h2>
   
 
       
         
   
   <div class="categories">
-    <a href="/categories/JavaScript/">JavaScript</a>
+    <a href="/categories/感悟/">感悟</a>
   </div>
 
-        <time class="alignleft" datetime="2013-12-29T15:38:00.000Z">
-            2013-12-29 23:38
+        <time class="alignleft" datetime="2013-12-31T18:40:00.000Z">
+            2014-01-01 02:40
         </time>
         <div class="author">yutao</div>
       
     </header>
     <div class="entry">
       
-        <h3><strong>constructor</strong></h3>
-<p>语法：object.constructor<br>作用：返回创建了当前这个对象实例的构造函数<br>描述：新函数创建时，该函数的原型对象下都会获得一个constructor属性<a id="more"></a><br>检测一下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-</pre></td><td class="code"><pre><span class="keyword">var</span> str = new <span class="keyword">String</span>(<span class="string">'123'</span>),
-		str2 = <span class="string">'2121'</span>,
-		date = new Date(),
-		Fn = <span class="keyword">function</span>()<span class="comment">{}</span>,
-		fn1 = new Fn(),
-		obj = <span class="comment">{}</span>;
-console.log(str.<span class="function"><span class="keyword">constructor</span> === <span class="title">String</span>);</span><span class="comment">//true</span>
-console.log(str2.<span class="function"><span class="keyword">constructor</span> === <span class="title">String</span>);</span><span class="comment">//true</span>
-console.log(date.<span class="function"><span class="keyword">constructor</span> === <span class="title">Date</span>);</span><span class="comment">//true</span>
-console.log(Fn.<span class="function"><span class="keyword">constructor</span> === <span class="title">Function</span>);</span><span class="comment">//true</span>
-console.log(fn1.<span class="function"><span class="keyword">constructor</span> === <span class="title">Fn</span>);</span><span class="comment">//true</span>
-console.log(Fn.prototype.<span class="function"><span class="keyword">constructor</span> === <span class="title">Fn</span>);</span><span class="comment">//true</span>
-console.log(obj.<span class="function"><span class="keyword">constructor</span> === <span class="title">Object</span>);</span><span class="comment">//true</span>
-</pre></td></tr></table></figure>
-
-<p>按照上面的例子来看，好像解决了typeof不能解决的问题，但这个事例开头的描述里已经说明：“函数的原型对象下都会获得一个constructor属性”,这句话暴露了constructor判断类型的一个弱点，constructor是原型对象的一个属性，问题出来了，我们在用构造原型模式或者做一些继承的时候，原型(prototype)这家伙经常被我们放置实例共享的一些属性和方法。改写后的prototype的constructor属性会不会有影响？看下代码。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-</pre></td><td class="code"><pre><span class="function"><span class="keyword">function</span> <span class="title">D</span><span class="params">()</span><span class="comment">{}</span>;</span>
-<span class="keyword">var</span> newd = new D();
-console.log(D.prototype.<span class="function"><span class="keyword">constructor</span> === <span class="title">D</span>);</span><span class="comment">//true</span>
-console.log(newd.<span class="function"><span class="keyword">constructor</span> === <span class="title">D</span>);</span><span class="comment">//true</span>
-
-D.prototype = <span class="comment">{}</span>;<span class="comment">// 等价于 D.prototype = new Object();</span>
-<span class="keyword">var</span> newdd = new D();
-console.log(D.prototype.<span class="function"><span class="keyword">constructor</span> === <span class="title">D</span>);</span><span class="comment">//false</span>
-console.log(D.prototype.<span class="function"><span class="keyword">constructor</span> === <span class="title">Object</span>);</span><span class="comment">//true</span>
-console.log(newdd.<span class="function"><span class="keyword">constructor</span> === <span class="title">Object</span>);</span><span class="comment">//true</span>
-</pre></td></tr></table></figure>
-
-<p><strong>constructor也是不靠谱的，并且此属性最初是用来标识对象类型的，用来检测类型总觉得有些别扭</strong><br>相关：<br><a target="_blank" href="">JavaScript类型检测笔记之typeof</a><br><a target="_blank" href="">JavaScript类型检测笔记之instanceof</a></p>
+        <p>第一次写总结，因为2013比往年都丰富。<br><strong>工作上我遇到了好的团队，这个团队的成员都很真诚、虚心、乐于分享。</strong><br>在这种氛围下，大家都是在无所顾忌的成长，并且这种成长并没有随着公司的业务变迁和组织架构的调整而改变。<a id="more"></a><br>大家一起探讨好的解决方案、好的效率工具以及一起面对困难。<br>每每想起这些，我觉得似乎我还坐在茶水间跟大家在争论着什么。<br>在这一年我不在是为技术而做技术，而是在为产品提供一种实现工具，为用户提供一种体验。<br>在工作的过程中花更多的时间是沟通而不是coding。<br>与产品沟通了解真实的产品意图，争取在前端上提供更好的解决方案；<br>与交互沟通了解交互思路，争取在前端提供更效率的交互；<br>与后端沟通定接口培养基情，争取减少前后端的集成时间。<br>每一步都是一种学习，产品、交互、到代码实现是一个整体，每一步都不应该陌生。<br>真诚的感谢德佑的小伙伴们～2013因你们生活才更精彩！</p>
+<p><strong>生活中我找到另一半，美丽、善良、懂事的老婆。没有什么比这个更成功了！</strong><br>嗯，我再也不用new一个对象了，很完美！我们构建了一个和谐美好的家庭。<br>按照我的理念家庭一定要和谐，家里有什么矛盾通常会快速的去处理。<br>大后方都不稳固好，谈何安心做自己的事业？家里都不开心，做的事业又有什么意义？<br>这几年家里的事情其实也不少，以前觉得家里的事情父母可以去解决，但今年突然觉得以前的认为太傻了，<br>我们年轻人处理一些事情都觉得累，更何况父母。所以现在我会主动的去帮助家里解决一些问题。<br>希望父母能够过的稍微轻松一些。同时这样也能更多的和家里沟通，让父母更开心、放心！</p>
+<p><strong>同时这一年一些思想在悄然变化，一定不要自我设限。</strong><br>我现在是一个前端，我就所有的事情都应该围绕着前端来做，NO！<br>你所做的每一件事情，比如跟其他岗位的沟通，跟其他公司朋友的交流，看的某一本书，哪怕你出去游玩。<br>这每一步都是生活，都是一段经历，这些经历或多或少肯定会为你今后的一些决策提供好的思路!Enjoy Yourself!</p>
+<p><strong>一个小遗憾</strong><br>这件事情就发生在2013年的最后一天，很荣幸我的面试官是@玉伯也叫射雕，终于见到真人了。<br>说实话接到支付宝的面试当晚2点才睡着，安排的昨天面试，前天晚上1点才睡着…我的心里素质不是这样的！！！<br>面试的时候还是太紧张，其实现在想想是太激动了，玉伯问的几个问题，我的回答在我看来很烂！！！<br>我是无法原谅自己的地步，哈哈，谁说这种经历不宝贵呢？我现在的这个阶段需要更多的烂来告诉自己，我有多大的提升空间！<br>跟一线的前端交流，收获真的非常多，你会更清楚的认识到自己处在哪个阶段，你甚至马上就可以明白下一步你该做什么！</p>
+<p><strong>欣喜的2013</strong><br>几件喜事加上些许遗憾，perfect～喜事让人满足开心，遗憾叫人不要得意忘性！</p>
+<p><strong>非常非常感谢德佑的小伙伴们，感谢我的爱人和亲人，希望来年大家更好！</strong></p>
+<p><strong>2014我要做的事情</strong><br>1、努力加入一个自己喜欢的前端团队<br>2、深入的去理解jQuery API的原理（你熟悉jQuery是吧,那你谈谈jQuery xxAPI的原理?傻眼可不行）<br>3、解决问题要坚持用五个为什么的分析方法<br>3、坚持记录（一个月至少一篇）<br>4、一个季度至少看一本书<br>5、给老婆买个mac air<br>6、给两边父母都换一部红米啥的<br>7、给自己买个自行车</p>
 
       
      
@@ -155,7 +108,7 @@ console.log(newdd.<span class="function"><span class="keyword">constructor</span
         
   
   <div class="tags">
-    <a href="/tags/类型检测/">类型检测</a>
+    <a href="/tags/感悟/">感悟</a>
   </div>
 
         <!--
@@ -197,7 +150,7 @@ console.log(newdd.<span class="function"><span class="keyword">constructor</span
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yutaoo.com/2013/12/29/js-constructor/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yutaoo.com/2014/01/01/2013-summary/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
