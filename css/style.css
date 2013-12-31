@@ -154,9 +154,9 @@ article.page .icon {
 article.post .icon:before {
   content: '&gt;';
 }
-article.post #ckepop{
-  overflow:hidden; 
-  margin-left:20px;
+article.post #ckepop {
+  overflow: hidden;
+  margin-left: 20px;
 }
 article.photo .icon:before {
   content: '&gt;';
