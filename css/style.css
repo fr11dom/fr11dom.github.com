@@ -484,9 +484,6 @@ article footer a.more-link {
   color: #c43c3c;
   border-bottom: solid 1px #c43c3c;
 }
-article footer a.more-link:before {
-  content: '>';
-}
 article footer a.comment-link:before {
   content: '>';
 }
