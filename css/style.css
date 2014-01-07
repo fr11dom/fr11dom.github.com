@@ -5,7 +5,7 @@
 body {
   background: #f6f6f6;
   color: #333;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3","微软雅黑";
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", '微软雅黑';
   font-size: 15px;
   text-shadow: 0 0 1px transparent;
 }
@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3","微软雅黑";
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", '微软雅黑';
 }
 h1 {
   font-size: 1.8em;
@@ -116,7 +116,7 @@ a:hover {
   margin-top: 10px;
 }
 #header #main-nav {
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3","微软雅黑";
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", '微软雅黑';
   line-height: 2.5em;
 }
 #header #main-nav ul {
@@ -228,20 +228,6 @@ article .gallery .next:before {
   margin-top: -12px;
   top: 50%;
 }
-article .gallery .prev {
-  left: 0;
-}
-article .gallery .prev:before {
-  content: '>';
-  left: 10px;
-}
-article .gallery .next {
-  right: 0;
-}
-article .gallery .next:before {
-  content: '>';
-  right: 10px;
-}
 article header .icon {
   width: 32px;
   height: 32px;
@@ -283,7 +269,7 @@ article header .author:before {
 }
 article header time {
   color: #666;
-  font: 0.9em "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3","微软雅黑";
+  font: 0.9em "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", '微软雅黑';
   margin-right: 10px;
 }
 article header time:before {
@@ -330,7 +316,7 @@ article .entry blockquote {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   font-style: italic;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3","微软雅黑";
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", '微软雅黑';
   font-size: 1.2em;
   padding: 0 30px 15px;
   text-align: center;
@@ -349,7 +335,7 @@ article .entry blockquote footer cite:before {
 }
 article .entry code,
 article .entry pre {
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3","微软雅黑";
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", '微软雅黑';
 }
 article .entry code {
   background: #eee;
@@ -523,7 +509,7 @@ article footer .addthis iframe {
   padding: 5px 10px;
   background: #ddd;
   color: #999;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3";
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", '微软雅黑';
   text-shadow: 0 0 1px #fff;
   margin-bottom: 50px;
 }
@@ -584,7 +570,7 @@ article footer .addthis iframe {
 }
 #sidebar .search input {
   background: #fff;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3";
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", '微软雅黑';
   font-size: 1em;
   padding: 10px 15px;
   border: solid 1px #eee;
@@ -639,7 +625,7 @@ article footer .addthis iframe {
 #footer {
   color: #999;
   margin-bottom: 50px;
-  font: 0.9em/1.6 "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3","微软雅黑";
+  font: 0.9em/1.6 "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", '微软雅黑';
   text-shadow: 0 0 1px #fff;
 }
 .entry .gist {
@@ -666,7 +652,7 @@ article footer .addthis iframe {
 }
 .entry .gist .gist-file .gist-data pre {
   padding: 0 !important;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3","微软雅黑";
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", '微软雅黑';
 }
 .entry .gist .gist-file .gist-meta {
   background: none;
